@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:200,400,500');
+
+/*================= GLOBAL CSS ==================*/
+
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	/* colors */
+	--primary: #ea4c3c;
+	--white: #fff;
+	--black: #393a62;
+	--lightGrey: #f1f1fb;
+	--lightViolet: #e8e8fb;
+	--fontColorThin: #9292ae;
+	--fontColorBold: #393a62;
+
+	/* rest of the vars */
+	--backgroundColor1: var(--white);
+	--backgroundColor2: var(--lightGrey);
+	--max-height: 40rem;
+	--max-width: 1120px;
+	--boarderRadius: 1.5rem;
+}
+
+html {
+	font-size: 100%;
+} /*16px*/
+
+body {
+	background: var(--lightViolet);
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	line-height: 1.75;
+	color: var(---black);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	/* margin: 3rem 0 1.38rem; */
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	line-height: 1.3;
+}
+
+h1 {
+	margin-top: 0;
+	font-size: 3.052rem;
+}
+
+h2 {
+	font-size: 2.441rem;
+}
+
+h3 {
+	font-size: 1.953rem;
+}
+
+h4 {
+	font-size: 1.563rem;
+}
+
+h5 {
+	font-size: 1.25rem;
+}
+
+small,
+.text_small {
+	font-size: 0.8rem;
+}
+
+.main-container {
+	margin: 0 auto;
+	margin-top: 3rem;
+	/* min-width: 12rem; */
+	max-width: var(--max-width);
+	height: var(--max-height);
+	border-radius: var(--boarderRadius);
+	display: flex;
+}
+
+/* aside {
+  width: 12rem;
+} */
+
+.sidebar-container {
+	background-color: #f1f1fb;
+	height: var(--max-height);
+	border-top-left-radius: var(--boarderRadius);
+	border-bottom-left-radius: var(--boarderRadius);
+	position: relative;
+}
+
+/*========== User Container ==============*/
+.user-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+	width: 100%;
+}
+
+.user-container img {
+	height: 3.5rem;
+	width: 3.5rem;
+	border-radius: 30%;
+	object-fit: cover;
+}
+
+.user-container p {
+	white-space: nowrap;
+	padding-left: 0.5rem;
+}
+
+.user-container .user-name {
+	font-weight: 800;
+}
+
+.user-container .user-account {
+	font-weight: 100;
+	color: var(--fontColorThin);
+}
+
+/*================= Side Menu ==================*/
+.side-menu {
+	padding: 0.5rem;
+}
+
+.side-menu .btn-container {
+	width: 100%;
+	/* margin-bottom: 0.1rem; */
+	display: flex;
+}
+
+.btn-container:hover .left-border {
+	visibility: visible;
+	opacity: 1;
+	transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+
+.btn-container .left-border {
+	width: 0.5rem;
+	height: 3.5rem;
+	background-color: var(--primary);
+	border-radius: 10rem;
+	margin-right: 2rem;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+
+.btn-container button {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	border: none;
+	background: none;
+}
+
+.btn-container button:hover {
+	cursor: pointer;
+}
+
+.btn-container button:hover span {
+	color: var(--fontColorBold);
+	transition: all 0.5s ease-in-out;
+}
+
+.btn-container span {
+	margin-left: 1.5rem;
+	color: var(--fontColorThin);
+	text-transform: capitalize;
+	font-weight: 100;
+}
+
+/*================ Logout ==================*/
+.log-out {
+	position: absolute;
+	bottom: 2rem;
+}
+
+.log-out .btn-container {
+  width: 100%;
+	display: flex;
+	align-items: center;
+  margin-left: 0.5rem;
+}
+
+/*================= Main =================*/
+main {
+  width: 100%;
+}
+
+.section-center {
+	background-color: var(--white);
+	height: var(--max-height);
+	border-top-right-radius: var(--boarderRadius);
+	border-bottom-right-radius: var(--boarderRadius);
+  padding: 2.5rem 4rem;
+  position: relative;
+}
+
+.section-center h1 {
+  margin: 0;
+  font-weight: bolder;
+}
+
+.billing {
+  width: 70%;
+}
+
+.subtitle {
+  margin-top: 3rem;
+}
+
+.subtitle h3 {
+  font-weight: bold;
+  font-size: medium;
+}
+
+.subtitle p {
+  color: var(--fontColorThin);
+}
+
+.billing-details-table {
+  margin-top: 3rem;
+  /* display: flex;
+  flex-direction: row;
+  align-items: center; */
+}
+
+.billing-details-table .table-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--fontColorThin);
+  font-weight: 400;
+  margin-bottom: 1rem;
+  padding-right: 1rem;
+}
+
+.billing-details-table .table-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.5rem;
+  padding: 0.5rem 2rem;
+  margin: 0 -2rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease-in-out;
+  color: var(--fontColorBold);
+  font-weight: bold;
+}
+
+.billing-details-table .table-body:hover {
+  box-shadow:  0px 3px 10px var(--lightViolet);
+}
+
+.table-body button {
+  padding: 5px 8px;
+  background: none;
+  border-radius: 0.3rem;
+  border: 1px solid var(--fontColorThin);
+  transition: all 0.5s ease-in-out;
+  color: var(--fontColorBold);
+  font-weight: bold;
+}
+
+.table-body button:hover {
+  background-color: var(--fontColorThin);
+  color: var(--white);
+  border-color: var(--lightGrey);
+  cursor: pointer;
+}
+
+.load-more a {
+  color: var(--primary);
+}
+
+.plan-card {
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  padding: 1.5rem 2rem;
+  position: absolute;
+  right: 2rem;
+  top: 4rem;
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+  font-weight:200;
+}
+
+.plan-card .your-plan {
+  margin-bottom: 1rem;
+}
+
+.plan-card .renew-date {
+  font-size: small;
+  margin-bottom: 1rem;
+}
+
+.plan-card button {
+  background: none;
+  border-radius: 0.2rem;
+  border: 0.5px solid white;
+  padding: 0.5rem 1rem;
+  color: white;
+}
+
+.payment {
+  margin-top: 2rem;
+  margin-right: 13rem;
+  align-items: center;
+}
+
+.payment h5 {
+  transform: scaleY(0.95);
+  font-size: medium;
+}
+
+.payment p {
+  color: var(--fontColorThin);
+  transform: scaleY(0.95);
+}
+
+.bank-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.bank-info img {
+  height: 2rem;
+  width: 3rem;
+}
+
+.bank-info .bank-icon {
+  display: flex;
+  align-items: center;
+}
+
+.bank-info button {
+  background: none;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--lightViolet);
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.bank-info button:hover {
+  cursor: pointer; 
+  background-color: #9292ae;
+  color: white;
+}
