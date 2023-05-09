@@ -37,6 +37,8 @@
 
 - [ ] User can view and browse current streams raw data in a given Apache Pulsar installation (one cluster, producer - consumer - topic level)
 
+![subdetails-backlog-inspect.png](./subdetails-backlog-inspect.png)
+
 But user can see a set of indicators like "In Rate" and "In Throughput"
 
 - [ ] User can view and browse current streams data with applied schema (one cluster, producer - consumer - topic level - schema)
