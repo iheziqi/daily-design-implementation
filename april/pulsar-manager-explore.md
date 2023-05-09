@@ -2,7 +2,9 @@
 
 1. **Stream exploration - READ**
 - Users can view and browse current streams raw data in a given Apache Pulsar installation (one cluster, producer - consumer - topic level)
+
 - User can view and browse current streams data with applied schema (one cluster, producer - consumer - topic level - schema)
+
 - Users can view the topology of an Apache Pulsar installation (multi-tenant, namespaces, multi-clusters) and browse its different levels down to topics (multi tenant, multi namespace, multi cluster, producer - consumer - topic level)
 2. **Stream manipulation (aka topic management: WRITE / MANAGE)**
 - Users can view Apache Pulsar topics and inspect them (stream exploration of persistent and non-persistent topics)
@@ -37,7 +39,7 @@
 
 - [ ] User can view and browse current streams raw data in a given Apache Pulsar installation (one cluster, producer - consumer - topic level)
 
-![subdetails-backlog-inspect.png](./subdetails-backlog-inspect.png)
+![subdetails-backlog-inspect.png](/Users/heziqi/Documents/code/2023/my-projects/daily-design-implement/april/subdetails-backlog-inspect.png)
 
 But user can see a set of indicators like "In Rate" and "In Throughput"
 
@@ -52,4 +54,3 @@ But user can see a set of indicators like "In Rate" and "In Throughput"
 - [x] Users can add new topics in a given cluster
 
 - [ ] Users can change the topology
-
